@@ -1,5 +1,5 @@
 module "roboshop_vpc" {
-  source = "../vpc-module"
+  source = "git::https://github.com/devopsprocloud/terraform-modules.git?ref=main"
   vpc_cidr = var.vpc_cidr
   project_name = var.project_name
   environment = var.environment
