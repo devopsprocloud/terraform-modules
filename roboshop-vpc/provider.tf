@@ -5,6 +5,13 @@ terraform {
       version = "6.4.0"
     }
   }
+
+  backend "s3"{
+  bucket = "devopsprocloud-remote-state"
+  key = "roboshop-vpc"
+  region = "us-east-1"
+  dynamodb_table = "devopsprocloud-remote-state-lock"
+}
 }
 
 provider "aws" {
